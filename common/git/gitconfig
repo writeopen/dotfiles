@@ -1,0 +1,35 @@
+[core]
+	pager = less
+	editor = vim
+
+[color]
+	diff = auto
+	branch = auto
+	status = auto
+
+[user]
+	name = Peter MacMillan
+	email = peter.macmillan@gmail.com
+
+[alias]
+	st = status -sb
+	rs = remote show
+	rso = remote show origin
+	rup = remote update -p
+	id = rev-parse --short HEAD
+	co = checkout
+
+	merged = branch -a --merged
+	mymerged = !git merged | grep origin
+
+	contains = branch -a --contains
+	who = shortlog -ns --no-merges
+
+[push]
+	default = nothing
+
+[pager]
+	log = $HOME/src/dotfiles/common/git/diff-highlight/diff-highlight | less
+	show = $HOME/src/dotfiles/common/git/diff-highlight/diff-highlight | less
+	diff = $HOME/src/dotfiles/common/git/diff-highlight/diff-highlight | less
+
