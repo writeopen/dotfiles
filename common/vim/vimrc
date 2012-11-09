@@ -1,0 +1,92 @@
+""
+"" Peter MacMillan <peter.macmillan@gmail.com>
+""
+
+call pathogen#runtime_append_all_bundles()
+
+set nocompatible
+set ttyfast
+set showcmd
+
+" buffers are hidden instead of being closed
+set hidden
+
+" how many commands are remembered <ESC>: <up><up>...
+set history=10000
+
+" line numbers, 5 char gutter, relative to position
+set number
+set numberwidth=5
+set relativenumber
+
+" where things go
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
+" search options
+set showmatch
+set incsearch
+set ignorecase smartcase
+set cursorline
+set cmdheight=2
+set switchbuf=useopen
+set showtabline=2
+set shell=bash
+set scrolloff=3
+set t_ti= t_te=
+set scrolloff=3
+set laststatus=2
+
+set ts=4
+set sw=4
+set number
+set autoindent
+set smartindent
+set noexpandtab
+set encoding=utf-8
+
+" windows
+set winheight=5
+set winminheight=5
+
+:set t_Co=256
+:set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
+
+" yum!
+syntax on
+
+"
+" keymaps
+"
+"
+" Move around splits with <c-hjkl>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+"
+" Clear the search buffer when hitting return
+function! MapCR()
+  nnoremap <cr> :nohlsearch<cr>
+endfunction
+call MapCR()
+
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
+"
+" quickly access files relative to current file
+" 
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+map <leader>v :view %%
+
+"
+" access the system clipboard where possible
+"
+map cy "+y
+map cv "+gP
+
