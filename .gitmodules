@@ -4,3 +4,12 @@
 [submodule "common/vim/vim/bundle/ack.vim"]
 	path = common/vim/vim/bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "common/vim/vim/bundle/ctrlp.vim"]
+	path = common/vim/vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
+[submodule "common/vim/vim/bundle/tir_black"]
+	path = common/vim/vim/bundle/tir_black
+	url = https://github.com/vim-scripts/tir_black
+[submodule "common/vim/vim/bundle/nerdtree"]
+	path = common/vim/vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree

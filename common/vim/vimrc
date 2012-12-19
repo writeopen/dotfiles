@@ -2,6 +2,8 @@
 "" Peter MacMillan <peter.macmillan@gmail.com>
 ""
 
+let mapleader=","
+
 call pathogen#runtime_append_all_bundles()
 
 set nocompatible
@@ -55,6 +57,7 @@ set winminheight=5
 
 " yum!
 syntax on
+colorscheme tir_black
 
 "
 " keymaps
@@ -85,8 +88,20 @@ map <leader>e :edit %%
 map <leader>v :view %%
 
 "
+" browse the active directory
+"
+map <leader>. :e %:p:h<CR>
+
+"
 " access the system clipboard where possible
 "
 map cy "+y
 map cv "+gP
+
+"
+" File search made fun!
+"
+map <leader>F :CtrlPClearAllCaches<cr>\|:CtrlP %%<cr>
+map <leader>f :CtrlPClearAllCaches<cr>\|:CtrlP<cr>
+
 
